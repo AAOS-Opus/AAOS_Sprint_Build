@@ -1,0 +1,43 @@
+# AAOS Protocol Documentation
+
+## WebSocket Message Types (14 Total)
+
+1. TASK_CREATE - Create new task
+2. TASK_UPDATE - Update task status
+3. TASK_DELETE - Delete task
+4. TASK_ASSIGN - Assign task to agent
+5. AGENT_REGISTER - Register new agent
+6. AGENT_HEARTBEAT - Agent health check
+7. AGENT_STATUS - Agent status update
+8. REASONING_START - Begin reasoning chain
+9. REASONING_STEP - Add reasoning step
+10. REASONING_COMPLETE - End reasoning chain
+11. CONSCIOUSNESS_SNAPSHOT - Record consciousness state
+12. SYSTEM_METRIC - Log system metric
+13. ERROR_REPORT - Report error
+14. ACKNOWLEDGMENT - Confirm receipt
+
+## Task Types Enum
+- code
+- research
+- qa
+- documentation
+- analysis
+- synthesis
+
+## Task Status Flow
+pending -> assigned -> in_progress -> completed/failed
+
+## Redis Queue Pattern
+- Queue name: task_queue
+- Operation: LPUSH for new tasks
+- Pattern: lpush task_queue <task_id>
+
+## API Endpoints
+- POST /tasks - Create task
+- GET /tasks/{task_id} - Get task details
+- PATCH /tasks/{task_id} - Update task
+- DELETE /tasks/{task_id} - Delete task
+- GET /tasks - List all tasks
+- GET /health - Health check
+- WS /ws - WebSocket connection

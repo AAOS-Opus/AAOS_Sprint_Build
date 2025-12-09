@@ -1,0 +1,46 @@
+=== E2E Stability Test ===
+Run 1: PASSED (previous run - 149.74s)
+Run : $(date)
+-------------------------------- live log call --------------------------------
+13:21:58 [    INFO] E2E Test test_e2e_system_metrics completed in 8.45s
+PASSED                                                                   [ 50%]
+tests/test_e2e.py::test_e2e_websocket_message_ordering 
+-------------------------------- live log call --------------------------------
+13:22:14 [    INFO] E2E Test test_e2e_websocket_message_ordering completed in 16.60s
+PASSED                                                                   [ 60%]
+tests/test_e2e.py::test_e2e_logging_integrity PASSED                     [ 70%]
+tests/test_e2e.py::test_e2e_cleanup_verification 
+-------------------------------- live log call --------------------------------
+13:22:19 [    INFO] E2E Test test_e2e_cleanup_verification completed in 4.12s
+PASSED                                                                   [ 80%]
+tests/test_e2e.py::test_e2e_prerequisites PASSED                         [ 90%]
+tests/test_e2e.py::test_e2e_performance_summary PASSED                   [100%]
+
+================================== FAILURES ===================================
+C:\Users\Owner\CascadeProjects\AAOS_sprint_Build\tests\test_e2e.py:132: AssertionError: assert 11 == 10
+=========================== short test summary info ===========================
+FAILED tests/test_e2e.py::test_e2e_concurrent_task_processing - AssertionErro...
+=================== 1 failed, 9 passed in 152.22s (0:02:32) ===================
+---
+Run : $(date)
+-------------------------------- live log call --------------------------------
+13:24:31 [    INFO] E2E Test test_e2e_system_metrics completed in 8.46s
+PASSED                                                                   [ 50%]
+tests/test_e2e.py::test_e2e_websocket_message_ordering 
+-------------------------------- live log call --------------------------------
+13:24:47 [    INFO] E2E Test test_e2e_websocket_message_ordering completed in 16.59s
+PASSED                                                                   [ 60%]
+tests/test_e2e.py::test_e2e_logging_integrity PASSED                     [ 70%]
+tests/test_e2e.py::test_e2e_cleanup_verification 
+-------------------------------- live log call --------------------------------
+13:24:52 [    INFO] E2E Test test_e2e_cleanup_verification completed in 4.08s
+PASSED                                                                   [ 80%]
+tests/test_e2e.py::test_e2e_prerequisites PASSED                         [ 90%]
+tests/test_e2e.py::test_e2e_performance_summary PASSED                   [100%]
+
+================================== FAILURES ===================================
+C:\Users\Owner\CascadeProjects\AAOS_sprint_Build\tests\test_e2e.py:132: AssertionError: assert 11 == 10
+=========================== short test summary info ===========================
+FAILED tests/test_e2e.py::test_e2e_concurrent_task_processing - AssertionErro...
+=================== 1 failed, 9 passed in 152.53s (0:02:32) ===================
+---

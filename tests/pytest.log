@@ -1,0 +1,1723 @@
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: test-agent (test)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+WARNING  aaos.lifecycle.health_monitor:health_monitor.py:191 Heartbeat from unregistered agent: unknown-agent
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for test-agent in closed state
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for test-agent in closed state
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for test-agent in closed state
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:134 Circuit breaker test-agent: closed -> open
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for test-agent in closed state
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:134 Circuit breaker test-agent: closed -> open
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for test-agent in closed state
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 226627b3 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 226627b3 DECIDED: value=system_initialization, prepare=5, commit=5, duration=1.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=1.0ms
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 00cbe465 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 00cbe465 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.0ms
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round a0b4bd4b started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round a0b4bd4b DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.9ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.9ms
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round dc664204 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round dc664204 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test-agent in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test-agent in state machine (INIT)
+WARNING  aaos.lifecycle.state_machine:state_machine.py:180 Agent test-agent already registered in state machine
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: init → discovery (Test reason)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: discovery → ready (Discovery complete)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent agent-0 in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent agent-1 in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent agent-2 in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent agent-3 in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent agent-4 in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-0: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-0: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-1: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-1: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-2: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-2: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-3: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-3: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-4: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent agent-4: discovery → ready (Discovery complete)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: ready → failed (Test failure)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for test in closed state
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:134 Circuit breaker test: closed -> open
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 3e61c84f started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 3e61c84f DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test failure)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test failure)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round e5059d93 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round e5059d93 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 585561ae started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 585561ae DECIDED: value=system_initialization, prepare=5, commit=5, duration=1.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=1.0ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus ready → failed (Test)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round b4f6f5ff started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round b4f6f5ff DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test)
+DEBUG    aaos.lifecycle.orchestrator:orchestrator.py:261 Agent maestro not operational (state: failed)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: ready → failed (Test)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: failed → init (Recovery initiated)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: discovery → ready (Discovery complete)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round aaf231a5 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round aaf231a5 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.6ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.6ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: failed → init (Recovery initiated)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro failed → init (Recovery initiated)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 162c38c0 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 162c38c0 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.0ms
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent test in state machine (INIT)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: init → discovery
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent test: discovery → ready
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round ca2e84a1 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round ca2e84a1 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.7ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.7ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:134 Circuit breaker maestro: closed -> open
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round a4829f43 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round a4829f43 DECIDED: value=system_initialization, prepare=5, commit=5, duration=1.0ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=1.0ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus ready → failed (Test)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: ready → failed (Test)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude ready → failed (Test)
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 9f79e2ca started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 9f79e2ca DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.5ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.5ms
+DEBUG    asyncio:proactor_events.py:633 Using proactor: IocpProactor
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:126 HealthMonitor created
+INFO     aaos.lifecycle.state_machine:state_machine.py:170 AgentStateMachine created
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:62 LifecycleOrchestrator created (Integration 2A + 2B + 2C)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:69 Initializing LifecycleOrchestrator...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:133 Initializing health monitor...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:135 Health monitor initialized successfully
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: maestro (orchestrator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: opus (conductor)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: claude (assistant)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: devzen (validator)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: frontend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: backend (architect)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: kimi (resilience)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: scout (reconnaissance)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:162 Registered agent: dr-aeon (diagnostics)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:174 Registered 9 ensemble agents
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for maestro in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent maestro in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for opus in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent opus in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for claude in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent claude in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for devzen in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent devzen in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for frontend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent frontend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for backend in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent backend in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for kimi in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent kimi in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for scout in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent scout in state machine (INIT)
+INFO     aaos.lifecycle.circuit_breaker:circuit_breaker.py:54 Circuit breaker initialized for dr-aeon in closed state
+INFO     aaos.lifecycle.state_machine:state_machine.py:189 Registered agent dr-aeon in state machine (INIT)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:96 LifecycleOrchestrator initialized with 9 agents (all in INIT state)
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:254 Health monitoring started
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:306 Waiting for heartbeat stabilization (0.1s)...
+INFO     aaos.lifecycle.health_monitor:health_monitor.py:323 Heartbeat stabilization complete - all agents healthy
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:111 LifecycleOrchestrator health monitoring ready
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:114 Advancing agents through lifecycle states...
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent claude: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: claude discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent devzen: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: devzen discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent frontend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: frontend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent backend: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: backend discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent kimi: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: kimi discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent scout: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: scout discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent dr-aeon: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: dr-aeon discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:122 All agents reached READY state (Integration 2B GATE PASSED)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:137 Initializing BFT Consensus (Integration 2C)...
+INFO     aaos.bft.quorum:quorum.py:56 QuorumCalculator initialized: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:192 ConsensusManager created: n=9, f=2, quorum=5
+INFO     aaos.bft.consensus:consensus.py:215 ConsensusManager initialized with 9 agents
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:157 Running initial consensus round...
+INFO     aaos.bft.consensus:consensus.py:289 Round 205e4a98 started: leader=maestro, value=system_initialization
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from maestro: 1/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from opus: 2/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from claude: 3/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from devzen: 4/5
+INFO     aaos.bft.consensus:consensus.py:337 Prepare vote from frontend: 5/5
+INFO     aaos.bft.consensus:consensus.py:344 Prepare quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from claude: 1/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from devzen: 2/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from frontend: 3/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from maestro: 4/5
+INFO     aaos.bft.consensus:consensus.py:401 Commit vote from opus: 5/5
+INFO     aaos.bft.consensus:consensus.py:408 Commit quorum achieved: 5 votes
+INFO     aaos.bft.consensus:consensus.py:446 Round 205e4a98 DECIDED: value=system_initialization, prepare=5, commit=5, duration=0.5ms
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:165 BFT Consensus operational (Integration 2C GATE PASSED): prepare=5, commit=5, duration=0.5ms
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: ready → failed (Test failure 1)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro ready → failed (Test failure 1)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: ready → failed (Test failure 2)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus ready → failed (Test failure 2)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: failed → init (Recovery initiated)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro failed → init (Recovery initiated)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent maestro: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: maestro discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: failed → init (Recovery initiated)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus failed → init (Recovery initiated)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: init → discovery (Starting discovery)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus init → discovery (Starting discovery)
+INFO     aaos.lifecycle.state_machine:state_machine.py:119 Agent opus: discovery → ready (Discovery complete)
+INFO     aaos.lifecycle.orchestrator:orchestrator.py:225 State change: opus discovery → ready (Discovery complete)
