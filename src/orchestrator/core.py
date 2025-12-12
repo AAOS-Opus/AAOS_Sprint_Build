@@ -420,6 +420,9 @@ class TaskType(str, Enum):
     documentation = "documentation"
     analysis = "analysis"
     synthesis = "synthesis"
+    # Aurora Trading Integration task types
+    trading_analysis = "trading_analysis"  # Technical analysis tasks
+    trading_signal = "trading_signal"      # Signal generation/validation
 
 
 class TaskCreate(BaseModel):
@@ -746,6 +749,19 @@ async def get_task(
 # WebSocket Connection Manager (Phase 2)
 # =============================================================================
 
+# =============================================================================
+# Task Capability Mapping (FM-TAW-004 Fix)
+# =============================================================================
+# Maps task_type to required agent capabilities.
+# Trading tasks require sovereign_access; signal tasks also need hidden_hand.
+# Generic tasks (code, research, etc.) have no special requirements.
+
+TASK_CAPABILITY_MAP: Dict[str, List[str]] = {
+    "trading_analysis": ["sovereign_access"],
+    "trading_signal": ["sovereign_access", "hidden_hand"],
+}
+
+
 class ConnectionManager:
     """Manages WebSocket connections for agents"""
 
@@ -787,11 +803,52 @@ class ConnectionManager:
         if agent_id in self.agent_info:
             self.agent_info[agent_id]["last_heartbeat"] = datetime.utcnow().isoformat()
 
-    def get_idle_agent(self) -> Optional[str]:
-        """Get an idle agent for task assignment"""
+    def get_idle_agent(self, task_type: Optional[str] = None) -> Optional[str]:
+        """
+        Get an idle agent for task assignment with capability matching.
+
+        FM-TAW-004 Fix: Trading tasks require specific capabilities.
+        - trading_analysis: requires sovereign_access
+        - trading_signal: requires sovereign_access + hidden_hand
+        - Other task types: no capability requirements
+
+        Args:
+            task_type: The type of task to match capabilities for
+
+        Returns:
+            agent_id if a capable idle agent is found, None otherwise
+        """
+        required_caps = TASK_CAPABILITY_MAP.get(task_type, []) if task_type else []
+
         for agent_id, info in self.agent_info.items():
-            if info["status"] == "idle" and agent_id in self.active_connections:
+            if info["status"] != "idle" or agent_id not in self.active_connections:
+                continue
+
+            # No capability requirements - any idle agent works
+            if not required_caps:
                 return agent_id
+
+            # Check if agent has all required capabilities
+            agent_caps = info.get("capabilities", {})
+            has_all_caps = all(
+                agent_caps.get(cap, False) for cap in required_caps
+            )
+
+            if has_all_caps:
+                return agent_id
+
+        # Log if we have idle agents but none with required capabilities
+        if required_caps:
+            idle_count = sum(
+                1 for info in self.agent_info.values()
+                if info["status"] == "idle"
+            )
+            if idle_count > 0:
+                logger.warning(
+                    f"No capable agent for task_type={task_type}: "
+                    f"{idle_count} idle agents lack required capabilities {required_caps}"
+                )
+
         return None
 
     def set_agent_status(self, agent_id: str, status: str):
@@ -853,53 +910,69 @@ async def task_assignment_loop():
                 await asyncio.sleep(0.1)
                 continue
 
-            # Find an idle agent BEFORE popping
-            agent_id = manager.get_idle_agent()
-            if not agent_id:
-                # No agent available - leave task in queue (preserves FIFO)
-                await asyncio.sleep(0.1)
-                continue
-
-            # Agent available - now safely pop the task (atomic FIFO preservation)
-            task_id = redis_client.rpop("task_queue")
-            if not task_id:
-                # Race condition: another consumer got it - continue
-                continue
-
-            logger.info(f"Dequeued task {task_id} for agent {agent_id}")  # DevZen Enhancement #2
-
-            # Get task details from database
+            # FM-TAW-004 Fix: Get task type BEFORE finding agent (capability matching)
+            # We need to know the task_type to find a capable agent
             db = SessionLocal()
             try:
                 task = db.query(Task).filter(Task.task_id == task_id).first()
-                if task and task.status == "pending":
-                    # Send task assignment to agent
-                    assignment = {
-                        "type": "task_assignment",
-                        "task_id": task_id,
-                        "task_type": task.task_type,
-                        "description": task.description,
-                        "priority": task.priority,
-                        "metadata": json.loads(task.metadata_json) if task.metadata_json else {}
-                    }
-                    await manager.send_message(agent_id, assignment)
-
-                    # Update task and agent status (Fix #3: set assigned_at for timeout tracking)
-                    task.status = "assigned"
-                    task.assigned_at = datetime.utcnow()  # Fix #3: Track assignment time
-                    task.updated_at = datetime.utcnow()
-                    db.commit()
-
-                    manager.set_agent_status(agent_id, "busy")
-                    manager.assign_task_to_agent(agent_id, task_id)
-
-                    # Fix #4: Notify circuit breaker that task was assigned
-                    task_circuit_breaker.on_task_assigned(task_id)
-
-                    logger.info(f"Task {task_id} assigned to {agent_id}")  # Traceability
-                else:
-                    # Task not found or already processed, skip
+                if not task or task.status != "pending":
+                    # Task not found or already processed - remove from queue
+                    redis_client.rpop("task_queue")
                     logger.warning(f"Task {task_id} not pending (status={task.status if task else 'NOT FOUND'})")
+                    continue
+
+                task_type = task.task_type
+
+                # Find an idle agent with required capabilities BEFORE popping
+                agent_id = manager.get_idle_agent(task_type)
+                if not agent_id:
+                    # No capable agent available - leave task in queue (preserves FIFO)
+                    # Warning is logged inside get_idle_agent() if agents exist but lack caps
+                    await asyncio.sleep(0.1)
+                    continue
+
+                # Capable agent available - now safely pop the task (atomic FIFO preservation)
+                popped_task_id = redis_client.rpop("task_queue")
+                if not popped_task_id:
+                    # Race condition: another consumer got it - continue
+                    continue
+
+                # Verify we popped the same task we peeked (consistency check)
+                if popped_task_id != task_id:
+                    logger.warning(
+                        f"Task queue race: peeked {task_id} but popped {popped_task_id}, "
+                        f"re-queuing {popped_task_id}"
+                    )
+                    redis_client.rpush("task_queue", popped_task_id)
+                    continue
+
+                logger.info(f"Dequeued task {task_id} (type={task_type}) for agent {agent_id}")
+
+                # Send task assignment to agent
+                assignment = {
+                    "type": "task_assignment",
+                    "task_id": task_id,
+                    "task_type": task_type,
+                    "description": task.description,
+                    "priority": task.priority,
+                    "metadata": json.loads(task.metadata_json) if task.metadata_json else {}
+                }
+                await manager.send_message(agent_id, assignment)
+
+                # Update task and agent status (Fix #3: set assigned_at for timeout tracking)
+                task.status = "assigned"
+                task.assigned_at = datetime.utcnow()  # Fix #3: Track assignment time
+                task.updated_at = datetime.utcnow()
+                db.commit()
+
+                manager.set_agent_status(agent_id, "busy")
+                manager.assign_task_to_agent(agent_id, task_id)
+
+                # Fix #4: Notify circuit breaker that task was assigned
+                task_circuit_breaker.on_task_assigned(task_id)
+
+                logger.info(f"Task {task_id} assigned to {agent_id}")  # Traceability
+
             finally:
                 db.close()
 
@@ -1430,6 +1503,11 @@ async def websocket_endpoint(websocket: WebSocket):
                 result = data.get("result", {})
                 reasoning_steps = data.get("reasoning_steps", [])
 
+                # Track task info for Redis publish (needed after DB close)
+                task_type_for_publish = None
+                completed_at_for_publish = None
+                db_commit_success = False
+
                 # Update task in database
                 db = SessionLocal()
                 try:
@@ -1437,18 +1515,52 @@ async def websocket_endpoint(websocket: WebSocket):
                     if task:
                         task.status = "completed"
                         task.updated_at = datetime.utcnow()
+                        completed_at_for_publish = datetime.utcnow().isoformat()
+                        task_type_for_publish = task.task_type
+
                         # Store result in metadata
                         existing_meta = json.loads(task.metadata_json) if task.metadata_json else {}
                         existing_meta["result"] = result
                         existing_meta["reasoning_steps"] = reasoning_steps
                         existing_meta["completed_by"] = completing_agent_id
-                        existing_meta["completed_at"] = datetime.utcnow().isoformat()
+                        existing_meta["completed_at"] = completed_at_for_publish
                         task.metadata_json = json.dumps(existing_meta)
                         db.commit()
+                        db_commit_success = True
 
                         logger.info(f"Task completed: {task_id} by {completing_agent_id}")
                 finally:
                     db.close()
+
+                # FM-RF-004: Write-through pattern - only publish AFTER successful DB commit
+                # Redis is for notification, DB is source of truth
+                if db_commit_success and task_type_for_publish:
+                    try:
+                        redis_client = redis.Redis(
+                            host=REDIS_HOST, port=REDIS_PORT, decode_responses=True
+                        )
+                        # FM-RF-001: Include timestamp for out-of-order prevention
+                        publish_payload = {
+                            "task_id": task_id,
+                            "task_type": task_type_for_publish,
+                            "status": "completed",
+                            "result": result,
+                            "completed_at": completed_at_for_publish,
+                            "agent_id": completing_agent_id
+                        }
+                        redis_client.publish(
+                            "aaos:task_complete",
+                            json.dumps(publish_payload)
+                        )
+                        logger.debug(
+                            f"Published task_complete to Redis: task_id={task_id}, "
+                            f"task_type={task_type_for_publish}"
+                        )
+                    except Exception as redis_error:
+                        # Non-fatal: DB is source of truth, Redis is notification only
+                        logger.warning(
+                            f"Failed to publish task_complete to Redis for {task_id}: {redis_error}"
+                        )
 
                 # Set agent back to idle and track completion
                 if completing_agent_id:
