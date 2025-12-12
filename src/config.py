@@ -79,6 +79,22 @@ class Settings:
     LOAD_DURATION_HOURS: int = int(os.getenv("LOAD_DURATION_HOURS", "24"))
 
     # ==========================================================================
+    # Task Timeout + Retry Settings (Fix #3)
+    # ==========================================================================
+    TASK_TIMEOUT_SECONDS: int = int(os.getenv("TASK_TIMEOUT_SECONDS", "300"))  # 5 minutes
+    TASK_MAX_RETRIES: int = int(os.getenv("TASK_MAX_RETRIES", "3"))
+    TASK_TIMEOUT_CHECK_INTERVAL: int = int(os.getenv("TASK_TIMEOUT_CHECK_INTERVAL", "30"))  # Check every 30s
+
+    # ==========================================================================
+    # Circuit Breaker Settings (Fix #4)
+    # ==========================================================================
+    CIRCUIT_BREAKER_ENABLED: bool = os.getenv("CIRCUIT_BREAKER_ENABLED", "true").lower() == "true"
+    CIRCUIT_MIN_AGENTS: int = int(os.getenv("CIRCUIT_MIN_AGENTS", "1"))  # Minimum agents to accept tasks
+    CIRCUIT_MAX_QUEUE_SIZE: int = int(os.getenv("CIRCUIT_MAX_QUEUE_SIZE", "1000"))  # Max queue before opening
+    CIRCUIT_RECOVERY_TIMEOUT: int = int(os.getenv("CIRCUIT_RECOVERY_TIMEOUT", "30"))  # Seconds before half-open
+    CIRCUIT_TEST_TASK_TIMEOUT: int = int(os.getenv("CIRCUIT_TEST_TASK_TIMEOUT", "60"))  # Seconds for test task
+
+    # ==========================================================================
     # Computed Properties
     # ==========================================================================
     @property

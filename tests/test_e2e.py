@@ -57,8 +57,12 @@ def cleanup_test_redis_keys():
 async def test_e2e_concurrent_task_processing():
     """
     Test 1: Multiple agents process tasks concurrently without conflicts
+    NOTE: Clears Redis queue to ensure clean state for this test
     """
     start_time = time.time()
+
+    # Clear Redis queue to ensure clean state
+    REDIS_CLIENT.delete("task_queue")
 
     # Create agents
     agents = []
@@ -146,47 +150,49 @@ async def test_e2e_concurrent_task_processing():
 async def test_e2e_redis_queue_monitoring():
     """
     Test 2: Redis queue handles rapid task submission
+    NOTE: Agent must be registered FIRST to keep circuit breaker closed (Fix #4)
     """
     start_time = time.time()
 
     # Clear queue for this test
     REDIS_CLIENT.delete("task_queue")
 
-    # Submit tasks rapidly
+    # Register agent FIRST to keep circuit breaker closed
+    agent_id = get_unique_agent_id("queue-test")
+    ws = await websockets.connect(ORCHESTRATOR_WS)
+    reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "queue-test"}
+    await ws.send(json.dumps(reg_msg))
+    await asyncio.wait_for(ws.recv(), timeout=5)
+
+    # Submit tasks rapidly (circuit breaker is closed because agent is connected)
+    task_ids = []
     async with aiohttp.ClientSession() as http_client:
         for i in range(15):
             task_payload = {"task_type": "code", "description": f"Queue test {i}", "priority": 5}
             async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
-                assert resp.status == 201
+                assert resp.status == 201, f"Task submission failed with status {resp.status}"
+                task_data = await resp.json()
+                task_ids.append(task_data["task_id"])
 
-    # Check queue was populated
-    initial_queue_len = REDIS_CLIENT.llen("task_queue")
-    assert initial_queue_len > 0  # Tasks should be queued
+    # Process tasks
+    processed = 0
+    while processed < 15:
+        try:
+            msg = await asyncio.wait_for(ws.recv(), timeout=30)
+            data = json.loads(msg)
+            if data["type"] == "task_assignment":
+                completion = {
+                    "type": "task_complete",
+                    "task_id": data["task_id"],
+                    "agent_id": agent_id,
+                    "result": {"status": "success"}
+                }
+                await ws.send(json.dumps(completion))
+                processed += 1
+        except asyncio.TimeoutError:
+            break
 
-    # Register an agent to process tasks
-    agent_id = get_unique_agent_id("queue-test")
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
-        reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "queue-test"}
-        await ws.send(json.dumps(reg_msg))
-        await asyncio.wait_for(ws.recv(), timeout=5)
-
-        # Process tasks
-        processed = 0
-        while processed < 15:
-            try:
-                msg = await asyncio.wait_for(ws.recv(), timeout=30)
-                data = json.loads(msg)
-                if data["type"] == "task_assignment":
-                    completion = {
-                        "type": "task_complete",
-                        "task_id": data["task_id"],
-                        "agent_id": agent_id,
-                        "result": {"status": "success"}
-                    }
-                    await ws.send(json.dumps(completion))
-                    processed += 1
-            except asyncio.TimeoutError:
-                break
+    await ws.close()
 
     # Verify queue is empty
     final_queue_len = REDIS_CLIENT.llen("task_queue")
@@ -200,39 +206,43 @@ async def test_e2e_redis_queue_monitoring():
 async def test_e2e_database_consistency():
     """
     Test 3: Verify database state remains consistent throughout processing
+    NOTE: Agent must be registered FIRST to keep circuit breaker closed (Fix #4)
     """
     start_time = time.time()
 
+    # Register agent FIRST to keep circuit breaker closed
+    agent_id = get_unique_agent_id("consistency")
+    ws = await websockets.connect(ORCHESTRATOR_WS)
+    reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "consistency-test"}
+    await ws.send(json.dumps(reg_msg))
+    await ws.recv()  # ack
+
     async with aiohttp.ClientSession() as http_client:
-        # Submit task
+        # Submit task (circuit breaker is closed because agent is connected)
         task_payload = {"task_type": "research", "description": "Consistency test", "priority": 8}
         async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+            assert resp.status == 201, f"Task submission failed with status {resp.status}"
             task_data = await resp.json()
             task_id = task_data["task_id"]
 
         # Verify initial state
         async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
             task = await resp.json()
-            assert task["status"] == "pending"
+            assert task["status"] in ["pending", "assigned"]  # May already be assigned
 
-        # Register agent and process
-        agent_id = get_unique_agent_id("consistency")
-        async with websockets.connect(ORCHESTRATOR_WS) as ws:
-            reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "consistency-test"}
-            await ws.send(json.dumps(reg_msg))
-            await ws.recv()  # ack
+        # Wait for assignment and process
+        msg = await asyncio.wait_for(ws.recv(), timeout=30)
+        assignment = json.loads(msg)
+        if assignment["type"] == "task_assignment":
+            completion = {
+                "type": "task_complete",
+                "task_id": task_id,
+                "agent_id": agent_id,
+                "result": {"status": "success"}
+            }
+            await ws.send(json.dumps(completion))
 
-            # Wait for assignment
-            msg = await asyncio.wait_for(ws.recv(), timeout=30)
-            assignment = json.loads(msg)
-            if assignment["type"] == "task_assignment":
-                completion = {
-                    "type": "task_complete",
-                    "task_id": task_id,
-                    "agent_id": agent_id,
-                    "result": {"status": "success"}
-                }
-                await ws.send(json.dumps(completion))
+        await ws.close()
 
         # Verify final state
         await asyncio.sleep(0.5)
@@ -249,27 +259,33 @@ async def test_e2e_database_consistency():
 async def test_e2e_error_recovery():
     """
     Test 4: System recovers from agent failure and reassigns task
+    NOTE: Agent must be registered FIRST to keep circuit breaker closed (Fix #4)
+    NOTE: Clears Redis queue to ensure clean state for this test
     """
     start_time = time.time()
 
-    async with aiohttp.ClientSession() as http_client:
-        # Submit task
-        task_payload = {"task_type": "code", "description": "Error recovery test", "priority": 9}
-        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
-            task_id = (await resp.json())["task_id"]
+    # Clear Redis queue to ensure clean state
+    REDIS_CLIENT.delete("task_queue")
 
-    # Agent 1 registers and receives task then crashes
+    # Agent 1 registers FIRST to keep circuit breaker closed
     agent1_id = get_unique_agent_id("flaky")
     ws1 = await websockets.connect(ORCHESTRATOR_WS)
     reg_msg = {"type": "register", "agent_id": agent1_id, "agent_type": "flaky-agent"}
     await ws1.send(json.dumps(reg_msg))
     await ws1.recv()  # ack
 
+    async with aiohttp.ClientSession() as http_client:
+        # Submit task (circuit breaker is closed because agent is connected)
+        task_payload = {"task_type": "code", "description": "Error recovery test", "priority": 9}
+        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+            assert resp.status == 201, f"Task submission failed with status {resp.status}"
+            task_id = (await resp.json())["task_id"]
+
     # Wait for assignment
     msg = await asyncio.wait_for(ws1.recv(), timeout=30)
     assignment = json.loads(msg)
     assert assignment["type"] == "task_assignment"
-    assert assignment["task_id"] == task_id
+    assert assignment["task_id"] == task_id, f"Expected task {task_id}, got {assignment['task_id']}"
 
     # Simulate crash (close without completion)
     await ws1.close()
@@ -307,8 +323,16 @@ async def test_e2e_error_recovery():
 async def test_e2e_system_metrics():
     """
     Test 5: System metrics endpoint provides accurate real-time data
+    NOTE: Agent must be registered FIRST to keep circuit breaker closed (Fix #4)
     """
     start_time = time.time()
+
+    # Register agent FIRST to keep circuit breaker closed
+    agent_id = get_unique_agent_id("metrics-test")
+    ws = await websockets.connect(ORCHESTRATOR_WS)
+    reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "metrics-test"}
+    await ws.send(json.dumps(reg_msg))
+    await ws.recv()  # ack
 
     async with aiohttp.ClientSession() as http_client:
         # Get metrics during idle state
@@ -321,10 +345,10 @@ async def test_e2e_system_metrics():
 
         initial_queued = idle_metrics["queued_tasks"]
 
-        # Submit a task
+        # Submit a task (circuit breaker is closed because agent is connected)
         task_payload = {"task_type": "analysis", "description": "Metrics test", "priority": 5}
         async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
-            assert resp.status == 201
+            assert resp.status == 201, f"Task submission failed with status {resp.status}"
 
         await asyncio.sleep(0.3)  # Allow metrics to update
 
@@ -332,6 +356,8 @@ async def test_e2e_system_metrics():
         async with http_client.get(f"{ORCHESTRATOR_HTTP}/metrics") as resp:
             busy_metrics = await resp.json()
             assert busy_metrics["queued_tasks"] >= initial_queued  # Task added to queue
+
+    await ws.close()
 
     duration = time.time() - start_time
     logger.info(f"E2E Test test_e2e_system_metrics completed in {duration:.2f}s")
@@ -341,29 +367,36 @@ async def test_e2e_system_metrics():
 async def test_e2e_websocket_message_ordering():
     """
     Test 6: WebSocket messages maintain proper ordering
+    NOTE: Register agent FIRST to submit task, then verify message order
     """
     start_time = time.time()
 
     agent_id = get_unique_agent_id("ordering")
     messages_received = []
 
+    # Register agent FIRST to keep circuit breaker closed
+    ws = await websockets.connect(ORCHESTRATOR_WS)
+    reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "ordering-test"}
+    await ws.send(json.dumps(reg_msg))
+
+    # Get registration_ack first
+    ack = await asyncio.wait_for(ws.recv(), timeout=10)
+    messages_received.append(json.loads(ack)["type"])
+
     async with aiohttp.ClientSession() as http_client:
-        # Submit task first
+        # Submit task (circuit breaker is closed because agent is connected)
         task_payload = {"task_type": "synthesis", "description": "Ordering test", "priority": 10}
         async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
-            task_id = (await resp.json())["task_id"]
+            assert resp.status == 201, f"Task submission failed with status {resp.status}"
 
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
-        reg_msg = {"type": "register", "agent_id": agent_id, "agent_type": "ordering-test"}
-        await ws.send(json.dumps(reg_msg))
+    # Wait for task assignment
+    try:
+        msg = await asyncio.wait_for(ws.recv(), timeout=10)
+        messages_received.append(json.loads(msg)["type"])
+    except asyncio.TimeoutError:
+        pass
 
-        # Capture messages
-        for _ in range(3):
-            try:
-                msg = await asyncio.wait_for(ws.recv(), timeout=10)
-                messages_received.append(json.loads(msg)["type"])
-            except asyncio.TimeoutError:
-                break
+    await ws.close()
 
     # Verify registration_ack comes before task_assignment
     assert "registration_ack" in messages_received
