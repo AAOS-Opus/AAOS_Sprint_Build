@@ -75,6 +75,7 @@ services:
       TELEMETRY_SAMPLE_INTERVAL: 60
       TELEMETRY_FLUSH_INTERVAL: 300
       TELEMETRY_MAX_LOG_SIZE_MB: 100
+      AAOS_API_KEY: ${AAOS_API_KEY:-O-cDTeZDyqGT6JRLp8p_aUv__je0ew-QXVThPhsGxKc}
     volumes:
       - ./logs:/app/logs
     ports:

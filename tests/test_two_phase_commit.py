@@ -22,7 +22,7 @@ import aiohttp
 import redis
 
 # Configuration
-ORCHESTRATOR_HTTP = "http://localhost:8080"
+ORCHESTRATOR_HTTP = "http://localhost:8000"
 REDIS_HOST = "localhost"
 REDIS_PORT = 6379
 API_KEY = "O-cDTeZDyqGT6JRLp8p_aUv__je0ew-QXVThPhsGxKc"

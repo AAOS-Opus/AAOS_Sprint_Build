@@ -21,7 +21,18 @@ import functools
 ORCHESTRATOR_WS = "ws://localhost:8000/ws"
 ORCHESTRATOR_HTTP = "http://localhost:8000"
 REDIS_CLIENT = redis.Redis(host='localhost', port=6379, decode_responses=True)
+API_KEY = "O-cDTeZDyqGT6JRLp8p_aUv__je0ew-QXVThPhsGxKc"
 logger = logging.getLogger("aaos.e2e_test")
+
+
+def get_auth_headers():
+    """Return headers with API key"""
+    return {"X-API-Key": API_KEY, "Content-Type": "application/json"}
+
+
+def get_ws_auth_headers():
+    """Return WebSocket auth headers"""
+    return {"X-API-Key": API_KEY}
 
 # Test constants
 CONCURRENT_AGENTS = 3
@@ -63,7 +74,7 @@ async def multi_agent_connections():
     """Create multiple WebSocket connections representing different agents"""
     connections = []
     for i in range(CONCURRENT_AGENTS):
-        ws = await websockets.connect(ORCHESTRATOR_WS)
+        ws = await websockets.connect(ORCHESTRATOR_WS, extra_headers=get_ws_auth_headers())
         connections.append({
             "agent_id": f"e2e-agent-{i}",
             "websocket": ws,
@@ -115,7 +126,7 @@ async def test_e2e_task_fifo_ordering(multi_agent_connections, http_client):
             "description": f"FIFO test task {i}",
             "priority": 5  # Same priority - FIFO only
         }
-        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
             assert resp.status == 201, f"Task submission failed with status {resp.status}"
             task_data = await resp.json()
             task_order.append(task_data["task_id"])
@@ -189,7 +200,7 @@ async def test_e2e_concurrent_task_processing(multi_agent_connections, http_clie
             "description": f"Concurrent task {i}",
             "priority": 5
         }
-        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
             assert resp.status == 201
             task_ids.append((await resp.json())["task_id"])
 
@@ -266,7 +277,7 @@ async def test_e2e_redis_queue_contention(multi_agent_connections, http_client):
     task_count = 20
     for i in range(task_count):
         task_payload = {"task_type": "code", "description": f"Contention test {i}", "priority": 5}
-        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
             assert resp.status == 201
 
     # Extended monitoring with active consumption
@@ -356,13 +367,13 @@ async def test_e2e_database_consistency(multi_agent_connections, http_client):
 
     # Submit task (circuit breaker is closed because agent is connected)
     task_payload = {"task_type": "research", "description": "DB consistency test", "priority": 8}
-    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
         assert resp.status == 201, f"Task submission failed with status {resp.status}"
         task_data = await resp.json()
         task_id = task_data["task_id"]
 
     # Verify initial state
-    async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
+    async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}", headers=get_auth_headers()) as resp:
         task = await resp.json()
         assert task["status"] in ["pending", "assigned"]  # May already be assigned
 
@@ -393,7 +404,7 @@ async def test_e2e_database_consistency(multi_agent_connections, http_client):
     convergence_start = time.time()
     for attempt in range(1, max_retries + 1):
         await asyncio.sleep(0.5)
-        async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
+        async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}", headers=get_auth_headers()) as resp:
             final_task = await resp.json()
             status = final_task.get("status")
 
@@ -432,7 +443,7 @@ async def test_e2e_error_recovery(multi_agent_connections, http_client):
 
     # Submit task (circuit breaker is closed because agent is connected)
     task_payload = {"task_type": "code", "description": "Error recovery test", "priority": 9}
-    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
         assert resp.status == 201, f"Task submission failed with status {resp.status}"
         task_id = (await resp.json())["task_id"]
 
@@ -486,7 +497,7 @@ async def test_e2e_error_recovery(multi_agent_connections, http_client):
     await agent2["websocket"].send(json.dumps(completion))
 
     # Verify final state
-    async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
+    async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}", headers=get_auth_headers()) as resp:
         task = await resp.json()
         assert task["status"] == "completed"
 
@@ -505,7 +516,7 @@ async def test_e2e_system_metrics(multi_agent_connections, http_client):
     await asyncio.wait_for(agent["websocket"].recv(), timeout=5)  # Wait for ack
 
     # Get metrics during idle state
-    async with http_client.get(f"{ORCHESTRATOR_HTTP}/metrics") as resp:
+    async with http_client.get(f"{ORCHESTRATOR_HTTP}/metrics", headers=get_auth_headers()) as resp:
         idle_metrics = await resp.json()
         assert "active_agents" in idle_metrics
         assert "queued_tasks" in idle_metrics
@@ -513,12 +524,12 @@ async def test_e2e_system_metrics(multi_agent_connections, http_client):
 
     # Verify metrics update after task submission (circuit breaker is closed)
     task_payload = {"task_type": "analysis", "description": "Metrics test", "priority": 5}
-    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
         assert resp.status == 201, f"Task submission failed with status {resp.status}"
 
     await asyncio.sleep(0.5)  # Allow metrics to update
 
-    async with http_client.get(f"{ORCHESTRATOR_HTTP}/metrics") as resp:
+    async with http_client.get(f"{ORCHESTRATOR_HTTP}/metrics", headers=get_auth_headers()) as resp:
         busy_metrics = await resp.json()
         assert busy_metrics["queued_tasks"] >= idle_metrics["queued_tasks"]  # Task may be assigned already
 
@@ -542,7 +553,7 @@ async def test_e2e_websocket_message_ordering(multi_agent_connections, http_clie
 
     # Submit task (circuit breaker is closed because agent is connected)
     task_payload = {"task_type": "synthesis", "description": "Ordering test", "priority": 10}
-    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+    async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
         assert resp.status == 201, f"Task submission failed with status {resp.status}"
 
     # Wait for task assignment
@@ -620,7 +631,7 @@ async def test_e2e_cleanup_and_state_reset(multi_agent_connections, http_client)
     await asyncio.wait_for(agent["websocket"].recv(), timeout=5)  # Wait for ack
 
     # Log initial state (API limited to 100 tasks)
-    async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks") as resp:
+    async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks", headers=get_auth_headers()) as resp:
         assert resp.status == 200
         initial_tasks = await resp.json()
         initial_pending = len([t for t in initial_tasks if t["status"] == "pending"])
@@ -630,7 +641,7 @@ async def test_e2e_cleanup_and_state_reset(multi_agent_connections, http_client)
     task_ids = []
     for i in range(3):
         task_payload = {"task_type": "code", "description": f"Cleanup test {i}", "priority": 5}
-        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload) as resp:
+        async with http_client.post(f"{ORCHESTRATOR_HTTP}/tasks", json=task_payload, headers=get_auth_headers()) as resp:
             assert resp.status == 201, f"Task submission failed with status {resp.status}"
             task_data = await resp.json()
             task_ids.append(task_data["task_id"])
@@ -638,7 +649,7 @@ async def test_e2e_cleanup_and_state_reset(multi_agent_connections, http_client)
 
     # Verify each specific task was created by fetching individually
     for task_id in task_ids:
-        async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
+        async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}", headers=get_auth_headers()) as resp:
             assert resp.status == 200, f"Task {task_id} not found after creation"
             task = await resp.json()
             assert task["status"] in ["pending", "assigned"], f"Task {task_id} has unexpected status: {task['status']}"
@@ -670,7 +681,7 @@ async def test_e2e_cleanup_and_state_reset(multi_agent_connections, http_client)
     pending_cleanup = []
     completed_cleanup = []
     for task_id in task_ids:
-        async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
+        async with http_client.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}", headers=get_auth_headers()) as resp:
             task = await resp.json()
             if task["status"] == "pending":
                 pending_cleanup.append(task_id)
@@ -690,7 +701,7 @@ async def test_e2e_cleanup_and_state_reset(multi_agent_connections, http_client)
     assert queue_len < 100, f"Queue unexpectedly large: {queue_len}"
 
     # Verify agents endpoint is responsive
-    async with http_client.get(f"{ORCHESTRATOR_HTTP}/agents") as resp:
+    async with http_client.get(f"{ORCHESTRATOR_HTTP}/agents", headers=get_auth_headers()) as resp:
         assert resp.status == 200
         agents = await resp.json()
         active_agents = [a for a in agents if a.get("status") in ["idle", "busy"]]

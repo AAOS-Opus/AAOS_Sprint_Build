@@ -16,6 +16,20 @@ import aiohttp
 # Configuration from Phase 0 discovery
 ORCHESTRATOR_WS = "ws://localhost:8000/ws"
 ORCHESTRATOR_HTTP = "http://localhost:8000"
+API_KEY = "O-cDTeZDyqGT6JRLp8p_aUv__je0ew-QXVThPhsGxKc"
+
+
+def get_auth_headers():
+    """Return headers with API key"""
+    return {
+        "X-API-Key": API_KEY,
+        "Content-Type": "application/json"
+    }
+
+
+def get_ws_auth_headers():
+    """Return WebSocket auth headers"""
+    return {"X-API-Key": API_KEY}
 
 
 def get_unique_agent_id():
@@ -58,7 +72,7 @@ async def test_agent_registration(registration_message):
     """
     agent_id = registration_message["agent_id"]
 
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
+    async with websockets.connect(ORCHESTRATOR_WS, extra_headers=get_ws_auth_headers()) as ws:
         # Send registration
         await ws.send(json.dumps(registration_message))
 
@@ -74,7 +88,7 @@ async def test_agent_registration(registration_message):
         # Verify agent appears in API
         await asyncio.sleep(0.5)  # Allow for processing
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"{ORCHESTRATOR_HTTP}/agents") as resp:
+            async with session.get(f"{ORCHESTRATOR_HTTP}/agents", headers=get_auth_headers()) as resp:
                 assert resp.status == 200
                 agents = await resp.json()
                 assert any(a["agent_id"] == agent_id for a in agents)
@@ -89,7 +103,7 @@ async def test_agent_heartbeat(registration_message, heartbeat_message):
     agent_id = registration_message["agent_id"]
     heartbeat_message["agent_id"] = agent_id
 
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
+    async with websockets.connect(ORCHESTRATOR_WS, extra_headers=get_ws_auth_headers()) as ws:
         # First register
         await ws.send(json.dumps(registration_message))
         ack = await asyncio.wait_for(ws.recv(), timeout=5)
@@ -116,7 +130,7 @@ async def test_agent_task_completion(registration_message):
     """
     agent_id = registration_message["agent_id"]
 
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
+    async with websockets.connect(ORCHESTRATOR_WS, extra_headers=get_ws_auth_headers()) as ws:
         # Step 1: Register agent
         await ws.send(json.dumps(registration_message))
         ack = await asyncio.wait_for(ws.recv(), timeout=5)
@@ -132,7 +146,8 @@ async def test_agent_task_completion(registration_message):
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 f"{ORCHESTRATOR_HTTP}/tasks",
-                json=task_payload
+                json=task_payload,
+                headers=get_auth_headers()
             ) as resp:
                 assert resp.status == 201
                 task_data = await resp.json()
@@ -172,7 +187,7 @@ async def test_agent_task_completion(registration_message):
             await asyncio.sleep(1)  # Allow for DB update
 
             async with aiohttp.ClientSession() as session:
-                async with session.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}") as resp:
+                async with session.get(f"{ORCHESTRATOR_HTTP}/tasks/{task_id}", headers=get_auth_headers()) as resp:
                     assert resp.status == 200
                     final_task = await resp.json()
                     assert final_task["status"] == "completed"
@@ -189,7 +204,7 @@ async def test_agent_multiple_tasks(registration_message):
     """
     agent_id = registration_message["agent_id"]
 
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
+    async with websockets.connect(ORCHESTRATOR_WS, extra_headers=get_ws_auth_headers()) as ws:
         # Register agent
         await ws.send(json.dumps(registration_message))
         ack = await asyncio.wait_for(ws.recv(), timeout=5)
@@ -206,7 +221,8 @@ async def test_agent_multiple_tasks(registration_message):
                 }
                 async with session.post(
                     f"{ORCHESTRATOR_HTTP}/tasks",
-                    json=task_payload
+                    json=task_payload,
+                    headers=get_auth_headers()
                 ) as resp:
                     assert resp.status == 201
                     task_data = await resp.json()
@@ -239,7 +255,7 @@ async def test_agent_graceful_shutdown(registration_message):
     """
     agent_id = registration_message["agent_id"]
 
-    async with websockets.connect(ORCHESTRATOR_WS) as ws:
+    async with websockets.connect(ORCHESTRATOR_WS, extra_headers=get_ws_auth_headers()) as ws:
         # Register
         await ws.send(json.dumps(registration_message))
         ack = await asyncio.wait_for(ws.recv(), timeout=5)
@@ -252,7 +268,7 @@ async def test_agent_graceful_shutdown(registration_message):
     # Verify agent marked as disconnected (after brief delay)
     await asyncio.sleep(1)
     async with aiohttp.ClientSession() as session:
-        async with session.get(f"{ORCHESTRATOR_HTTP}/agents") as resp:
+        async with session.get(f"{ORCHESTRATOR_HTTP}/agents", headers=get_auth_headers()) as resp:
             agents = await resp.json()
             # Agent may still be listed but marked as disconnected
             test_agent = next((a for a in agents if a["agent_id"] == agent_id), None)
